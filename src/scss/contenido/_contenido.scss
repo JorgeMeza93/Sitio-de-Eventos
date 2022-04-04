@@ -1,0 +1,27 @@
+@use "../base/mixins";
+@use "../base/variables";
+
+.grupos{
+    color: variables.$blanco;
+    padding: 5rem 0;
+    background-image: linear-gradient(to bottom, variables.$primario 0%, variables.$primario 50%, 
+        variables.$secundario 50%, variables.$secundario 100%);
+    @include mixins.tablet{
+        background-image: linear-gradient(to right, variables.$primario 0%, variables.$primario 50%, 
+        variables.$secundario 50%, variables.$secundario 100%);
+    }
+    &__grid{
+        @include mixins.grid(1, 5rem);
+        @include mixins.tablet{
+            @include mixins.grid(2, 5rem);
+        }
+    }
+    &__heading{
+        font-size: 3rem;
+    }
+    &__texto{
+        color: variables.$blanco;
+        font-size: 2.4rem;
+        line-height: 2;
+    }
+}

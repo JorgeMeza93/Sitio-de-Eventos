@@ -1,0 +1,35 @@
+@use "../base/mixins";
+@use "../base/variables";
+
+.busqueda{
+    background-color: variables.$grisClaro;
+    padding: 5rem 0;
+    &__heading{
+        text-align: center;
+        margin: 0;
+        color: variables.$gris;
+    }
+}
+.formulario{
+    margin-top: 2rem;
+    display: flex;
+    flex-direction: column;
+    @include mixins.tablet{
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 3rem;
+    }
+
+    &__campo{
+        padding: 1rem;
+        border: 1px solid lighten(variables.$gris, $amount: 50%);
+        margin-bottom: 2rem;
+        @include mixins.tablet{
+            margin-bottom: 0
+        }
+    }
+    &__submit{
+        @include mixins.boton(variables.$primario, variables.$blanco);
+        margin-top: 0;
+    }
+}

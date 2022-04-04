@@ -1,0 +1,13 @@
+@use "../base/variables";
+@use "../base/mixins";
+
+.header{
+    display: flex;
+    flex-direction: column;
+    padding: 2rem 0;
+    align-items: center;
+    @include mixins.tablet{
+        flex-direction: row;
+        justify-content: space-between;
+    }
+}

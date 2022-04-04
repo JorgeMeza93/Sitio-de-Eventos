@@ -1,0 +1,16 @@
+@use "../base/mixins";
+@use "../base/variables";
+
+.sidebar{
+    &__contenido{
+        background-color: variables.$secundario;
+        padding: 2rem;
+        text-align: center;
+    }
+    &__texto, &__heading{
+        color: variables.$blanco;
+    }
+    &__label{
+        font-weight: 700;
+    }
+}

@@ -1,0 +1,17 @@
+@use "../base/variables";
+@use "../base/mixins";
+
+.footer{
+    padding-top: 5rem;
+    &__copyright{
+        padding: 1rem;
+        text-align: center;
+    }
+    &::after{
+        content: "Designed by Jorge Meza Bello 03/04/2022";
+        color: variables.$primario;
+        display: block;
+        text-align: right;
+        font-size: 1.8rem;
+    }
+}

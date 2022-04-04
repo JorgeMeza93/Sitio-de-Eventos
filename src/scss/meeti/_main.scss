@@ -1,0 +1,17 @@
+@use "../base/mixins";
+@use "../base/variables";
+
+.articulo{
+    &__heading{
+        @include mixins.heading;
+        margin-bottom: 5rem;
+    }
+    &__grid{
+        @include mixins.tablet{
+            @include mixins.grid(3, 2rem);
+        }
+    }
+    &__principal{
+        grid-column: 1/3;
+    }
+}
